@@ -1,0 +1,21 @@
+{
+  "name": "ngx-french-location",
+  "version": "0.0.1",
+  "author": {
+    "name": "Frederick BALDO",
+    "email": "f.baldo31@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "prepare": "ng build ngx-french-location",
+    "test": "ng test ngx-french-location"
+  },
+  "tags": [ "french", "cities", "select", "official", "postal", "codes", "france"],
+  "peerDependencies": {
+    "@angular/common": "^6.x | ^7.x | ^8.x",
+    "@angular/core": "^6.x | ^7.x | ^8.x"
+  }
+}

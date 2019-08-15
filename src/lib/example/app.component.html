@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+      
+  <h2>Simple select</h2>
+  <!-- Counties -->
+  <div class="form-group">
+      <label for="countiesSelect">County</label>
+      <select class="form-control" id="countiesSelect" name="{{inputName}}" (change)="getCities($event)" [(ngModel)]="county">
+      <option selected>{{selectLabel}} </option>
+      <option *ngFor="let c of counties" value="{{c.code}}">{{c.nom}}</option>
+          <ng-template *ngIf="counties && counties.length">
+              <option *ngFor="let c of counties">{{c.nom}}</option>
+          </ng-template>
+      </select>
+  </div>
+
+  <p *ngIf="district">This county is part of {{district.nom}}</p>
+
+  <!-- Cities -->
+  <div class="form-group" *ngIf="cities && cities.length">
+      <label for="citiesSelect">City</label>
+      <select class="form-control" id="citiesSelect" name="{{inputName}}" (change)="displayPostalCodes()" [(ngModel)]="city">
+      <option selected>{{selectLabel}} </option>
+      <option *ngFor="let c of cities" value="{{c.code}}">{{c.nom}}</option>
+            <option *ngFor="let c of cities">{{c.nom}}</option>
+      </select>
+  </div>
+</div>
+
+<p *ngIf="city">Availables postal codes: {{postalCodes}}</p>
