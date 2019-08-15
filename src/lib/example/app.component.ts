@@ -1,9 +1,9 @@
-import { City } from 'projects/ngx-french-location/src/lib/cities';
+import { City } from '../../lib/cities';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { County } from 'projects/ngx-french-location/src/lib/county';
-import { NgxFrenchLocationService } from 'projects/ngx-french-location/src/public-api';
-import { District } from 'projects/ngx-french-location/src/lib/district';
+import { County } from '../../lib/county';
+import { NgxFrenchLocationService } from '../../public-api';
+import { District } from '../../lib/district';
 
 @Component({
   selector: 'lib-app-root',
